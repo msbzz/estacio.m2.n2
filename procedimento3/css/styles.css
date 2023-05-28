@@ -1,0 +1,18 @@
+ 
+.title p{
+    color:#fff;
+}
+
+#pnlUsuarios{
+    display: flex;
+ }
+
+.card{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-img-top img1{
+    width:220px ;
+}

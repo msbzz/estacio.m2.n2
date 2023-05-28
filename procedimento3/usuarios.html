@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- css bs  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+         
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Usuários de Teste via REST</title>
+    
+    </head>
+<body>
+    <div class="container bg-warning"   >
+        <div class="title">
+          <h1>Usuarios de teste via REST</h1>
+          <p>Os usuários deste exemplo são fornecidos pela API de testes regres.in </p>
+        </div>
+        <div class="row">
+ 
+        <div class="flex-wrap" id="pnlUsuarios">
+     
+
+            <div class="col p-2 m-3" v-for="(user, index) in users.slice(0, 13)" :key="index">
+                <div class="card  ">
+                  <div class="card-body">
+                    <img :src="user.avatar" class="card-img-top" alt="Avatar do usuário">
+       
+                    <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
+                    <p class="card-text">{{ user.email }}</p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            users: [],
+          };
+        },
+        mounted() {
+          // Fazendo a requisição usando o Fetch
+          fetch('https://reqres.in/api/users?per_page=10')
+            .then(response => response.json())
+            .then(data => {
+              this.users = data.data;
+            })
+            .catch(error => console.error(error));
+        },
+      });
+      app.mount('#pnlUsuarios');
+    </script>
+</body>
+
+</html>
