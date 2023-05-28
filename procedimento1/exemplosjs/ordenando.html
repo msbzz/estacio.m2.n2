@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/ordenando.js" defer></script>
+    <title>Missão 2 M2</title>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <h1>Ordenando Valores</h1>
+
+        <div class="fields-info">
+            <label for="valor">Valor</label>
+            <input type="text" id="valor">
+        </div>
+        <button onclick="add()" id="adicionar">Adicionar</button>
+        <hr>
+    </div>
+
+    <div class="fields-info">
+        <div class="select-order">
+            <label for="valor">Ordenar</label>
+            <select title="Ordenar" id="ordenacao" onchange="getOrder()">
+                <option value="">escolha a ordenação</option>
+                <option value="bubble_sort">bubble_sort</option>
+                <option value="selection_sort">selection_sort</option>
+                <option value="quick_sort">quick_sort</option>
+                <!-- <option value="swap">swap</option>
+                <option value="particionamento">particionamento</option>
+                 -->
+            </select>
+        </div>
+        <div class="buttons-order">
+            <button onclick="ordenar()" class="btn" id="ordenar">Ordenar</button>
+            <button onclick="misturar()" class="btn" id="misturar">Misturar</button>
+            <button onclick="removeList()" class="btn" id="remover">remover lista</button>
+ 
+            
+        </div>
+    </div>
+    <hr>
+    <div class="lista-array">
+        <ul id="valores"></ul>
+    </div>
+    </div>
+
+</body>
+<script>
+
+
+    var tipoOrdenacao = ''
+    /*var arrayResult = []*/
+
+    function add() {
+        const addNew = document.getElementById("valor")
+
+        if (!ItemContidoNaList(addNew.value)) {
+
+            const lista = document.getElementById("valores");
+            const item = document.createElement("li");
+            item.appendChild(document.createTextNode(addNew.value));
+            lista.appendChild(item);
+        } else {
+            alert('Elemento ' + '"' + addNew.value + '"' + ' já pertence a lista')
+        }
+    }
+
+    function misturar() {
+        let items = getArray()
+
+        let aValores = shuffle(items, items.length)
+
+        carregarList(aValores)
+
+    }
+
+    function ordenar() {
+
+        var aValores = getArray()
+
+        
+
+        switch (tipoOrdenacao) {
+
+            case "bubble_sort":
+                console.log('antes bsort',aValores)
+                bubble_sort(aValores)
+                console.log('depois bsort',aValores)
+                carregarList(aValores)
+                break;
+            case "selection_sort":
+                selection_sort(aValores)
+                carregarList(aValores)
+                break;
+            case "quick_sort":
+                quickSortOrder(aValores)
+                carregarList(aValores)
+                break;
+
+        }
+    }
+
+    function ItemContidoNaList(num) {
+        const lista = getArray()
+        return Finded(num, lista)
+   
+    }
+
+function quickSortOrder(aValores){
+    const length=aValores.length
+    const posIni=0
+    const posFim=length-1
+    let arr=[]
+    //console.log('aValores,posIni,posFim',aValores,posIni,posFim)
+    arr =quick_sort(aValores,posIni,posFim)
+    return arr
+}
+
+    function getArray() {
+
+         const lista = document.getElementById("valores");
+  
+
+        let aValores = [];
+
+        for (let i = 0; i < lista.children.length; i++) {
+            aValores.push(lista.children[i].textContent);
+        }
+
+ 
+        return aValores
+
+    }
+
+
+    function getOrder() {
+        var select = document.getElementById("ordenacao");
+        var valorSelecionado = select.options[select.selectedIndex].value;
+        console.log('valorSelecionado ==>',valorSelecionado) 
+        tipoOrdenacao = valorSelecionado
+    }
+
+    /* enter atraves do keypress do input  */
+
+    const input = document.getElementById("valor");
+
+    input.addEventListener("keypress", (event) => {
+
+        const key = event.which || event.keyCode;
+
+        if (key === 13) {
+
+            add();
+            input.value = '';
+        }
+    });
+</script>
+
+</html>
