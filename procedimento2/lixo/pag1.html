@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Minha página</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      receita = 
+      {
+          título: "Bife acebolado com fritas",
+          imagem: "img/bifecomfritas2.png",
+          preparo: "Bife acebolado com fritas é um clássico dos restaurantes e botecos do Brasil. E não é à toa: esse prato tão simples e delicioso fica perfeito com um arroz branco bem soltinho, uma salada, uma cerveja pra acompanhar... hhhmm!",
+          ingredientes: [
+              { ingrediente: '1 bife' },
+              { ingrediente: '1 cebola pequena' },
+              { ingrediente: '1 dente de alho' },
+              { ingrediente: '3 batatas pequenas' }
+  
+          ]
+      }
+       
+   
+  
+  function getListaIngredientes(itens) {
+     let returnItem='' 
+     itens.map(ingrediente=>{
+          
+      returnItem += `<li>${ingrediente.ingrediente}</li>`;
+      })
+ 
+     return returnItem;
+   }
+   const containerDiv = document.getElementById('container');
+   containerDiv.innerHTML = `
+     <div class="card">
+       <img class="card-img-top" src="img/arrozargrega.png" alt="">
+       <div class="card-body">
+         <h5 class="card-title">Arroz à grega tradicional</h5>
+         <div class="card-text">
+           <ul>
+             ${getListaIngredientes(receita.ingredientes)}
+           </ul>
+           <hr>
+           <p>O arroz à grega original é um prato com cara de festa, colorido e nutritivo. Ele é popular sobretudo como acompanhamento de ceia de Natal e ceia de Ano Novo, para servir no churrasco e mais.</p>
+         </div>
+       </div>
+     </div>
+   `;
+
+   //getListaIngredientes(receita.ingredientes)
+    </script>
+  </body>
+</html>

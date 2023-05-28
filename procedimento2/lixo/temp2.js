@@ -1,0 +1,16 @@
+const containerDiv = document.getElementById('container');
+containerDiv.innerHTML = `
+  <div class="card">
+    <img class="card-img-top" src="img/arrozargrega.png" alt="">
+    <div class="card-body">
+      <h5 class="card-title">Arroz à grega tradicional</h5>
+      <div class="card-text">
+        <ul>
+          <li>2 xícaras de arroz</li>
+        </ul>
+        <hr>
+        <p>O arroz à grega original é um prato com cara de festa, colorido e nutritivo. Ele é popular sobretudo como acompanhamento de ceia de Natal e ceia de Ano Novo, para servir no churrasco e mais.</p>
+      </div>
+    </div>
+  </div>
+`

@@ -1,0 +1,28 @@
+
+body {
+    width: 800px; /* define a largura da página em pixels */
+    height: 600px; /* define a altura da página em pixels */
+    margin: 0 auto; /* centraliza a página horizontalmente */
+  }
+
+#pnlCatalogo{
+    /*display: flex;*/
+    /*flex-direction: row;
+    align-items: center;
+     justify-content: space-between;
+    flex-wrap: wrap;     */
+}
+
+/* .container {
+    width: 100vh;
+}  */
+
+.card{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-img-top img1{
+    width:220px ;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Bootstrap 5 com cartões e flex-wrap</title>
+  <!-- Importação do Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-5zghnvA4YQfL+4v4XH4+uZdOc2j56uFwH29VrCpL+eiKfzGdwVGv9XbJgjEfhRN21+7s81tPeR8tRDrTjKdUIg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Definindo largura dos cartões */
+    .card {
+      width: 300px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exemplo de Bootstrap 5 com cartões e flex-wrap</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 flex-wrap">
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Imagem do cartão 1">
+          <div class="card-body">
+            <h5 class="card-title">Cartão 1</h5>
+            <p class="card-text">Este é o conteúdo do cartão 1.</p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Imagem do cartão 2">
+          <div class="card-body">
+            <h5 class="card-title">Cartão 2</h5>
+            <p class="card-text">Este é o conteúdo do cartão 2.</p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="https://picsum.photos/300/200" class="card-img-top" alt="Imagem do cartão 3">
+          <div class="card-body">
+            <h5 class="card-title">Cartão 3</h5>
+            <p class="card-text">Este é o conteúdo do cartão 3.</p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Importação do JavaScript do Bootstrap 5 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" integrity="sha512-BnbbRcSEna2Qr1rWYtURHg1f

@@ -1,0 +1,21 @@
+
+body {
+    width: 100vw; /* define a largura da página em pixels */
+    height: 100vh; /* define a altura da página em pixels */
+    margin: 0 auto; /* centraliza a página horizontalmente */
+    background-color: #FFCB00
+  }
+
+ .bg-warning-5{
+    background-color: #FFCB00;
+ }
+
+.card{
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-img-top img1{
+    width:220px ;
+}
