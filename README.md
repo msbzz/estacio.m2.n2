@@ -1,190 +1,265 @@
  
-## Estacio| Missão Prática | Nível 1 | Mundo 2
+## Estacio| Missão Prática | Nível 2 | Mundo 2
 
 ## Descrição
 
-  Projeto dividido em procedimentos que estarão se completando no final ou seja, no procedimento 4. 
-  A implementação é voltada a visualização de um site de receitas que contem elementos CSS e 
-  do framework Bootstrap para que tenha comportamento responsivo
+  Projeto dividido em procedimentos no qual é experimentado diversas formas de utilização do Java Script no lado cliente,
+   
+  O procedimento 1 trata-se de uma pagina de uma pagina de comparação entre algoritmos de ordenação. 
   
-  obs: as fontes e titulos foram personalizados 
+  Os procedimentos 2 e 3 são sobre leitura e apresentação de dados que estarão se completando no final ou seja, no procedimento 3. 
+  
+  
  
 ## Funcionalidades
+ 
+ 👉 1º Procedimento | Ordenando com Java Script e DOM
 
-👉 1º Procedimento | Página Inicial
+Crie um diretório com o nome "exemplosjs" e abra o Visual Studio Code;
+Crie um arquivo com o nome "ordenando.js", no ambiente de edição;
+Modifique o conteúdo do arquivo com a definição das seguintes funções,
+todas criadas no padrão Arrow Function:
+    a) Função swap, com o objetivo de trocar os valores de duas posições de um
+vetor, tendo como parâmetros de entrada o vetor e as posições
 
- Crie um diretório com o nome "receitas" e abra o Visual Studio Code;
- Crie uma página com o nome "home.html", no ambiente de edição;
- Defina a estrutura básica da página, digitando "html" seguido de "CTRL + Espaço",
- selecionando a opção "HTML:5";
+    b) Função shuffle, com o objetivo de embaralhar os elementos de um vetor,
+tendo como parâmetros de entrada o vetor e a quantidade de trocas
 
- ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/7a9ef2a1-8226-4a75-a0a4-e7ef08195f25)
+    c) Função bubble_sort, para ordenar um vetor de inteiros com o algoritmo
+Bubble Sort, tendo como parâmetro de entrada o vetor de inteiros
+
+    d) Função selection_sort, para ordenar um vetor de inteiros utilizando o
+algoritmo Selection Sort, tendo como parâmetro de entrada o vetor de valores
+inteiros
+
+    e) Função quick_sort, para ordenar um vetor de inteiros com o algoritmo
+Quick Sort, recursivo, tendo como parâmetros o vetor, posição inicial e posição
+final
+
+ f) Função particionamento, de apoio a quick_sort, tendo como parâmetros o
+vetor, posição inicial, posição final e valor do pivot
+
+Crie uma página com o nome "ordenando.html", no ambiente de edição;
+Defina a estrutura básica da página, digitando "html" seguindo de CTRL +
+Espaço, e selecionando a opção HTML: 5;
+
+![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/7bfc3ab9-01f4-4a2d-941b-0df492436cb1)
 
 
 Modifique o conteúdo do arquivo para obter as seguintes características:
     a) Alterar a linguagem para pt-br
 
-    b) Incluir elementos semânticos para estruturar o site
+    b) Incluir a biblioteca ordenando.js em uma tag script
 
-    c) Definir uma área para o menu
+    c) Definir um campo de entrada numérico, com o id valor
 
-    d) Copiar uma imagem png para o diretório, definindo a logotipo do site
+    d) Adicionar um botão com texto Adicionar, efetuando a chamada para uma
+função de nome add no clique
 
-    e) Definir a área principal com a logotipo, título e mensagem de boas-vindas
+    e) Definir um campo de seleção com as opções Blubble Sort, Selection Sort e
+Quick Sort, com Bubble Sort selecionado por padrão
 
-    f) Definir uma área de rodapé com informação de copyright
+    f) Adicionar um botão com o texto Ordenar, chamando a função ordenar
 
-Crie o arquivo "formatos.css" para formatação das páginas:
-    a) Definir uma classe para a logotipo, com largura e altura de 50 pixels
+    g) Adicionar um botão com o texto Misturar, chamando a função misturar
 
-    b) Definir a formatação das áreas semânticas
+    h) Definir uma lista (ul) com id valores, sem opções internas
 
-    c) Definir características tipográficas globais
+    i) Definir um trecho script, com as funções add, ordenar e misturar, todas no
+estilo clássico de escrita do Java Script e sem parâmetros
 
-    d) Explorar as possibilidades da visualização no modo flex
+Implemente a função add, para adicionar o valor digitado no campo de
+entrada à lista de valores, de acordo com os passos seguintes:
+    a) Capturar o campo de entrada com id valor via getElementById
 
-    e) Posicionar adequadamente as áreas semânticas
+    b) Capturar a lista com id valores
+
+    c) Criar uma variável node, com um elemento li definido via createElement
+
+    d) Definir um nó de texto, com o valor do campo de entrada, e incluí-lo como
+filho de node
+
+    e) Adicionar o elemento node à lista valores
+
+Implemente a função ordenar, para a ordenação da lista de valores, de acordo
+com os passos apresentados a seguir:
+    a) Capturar a lista de valores e a lista de seleção via getElementById
+
+    b) Através do atributo children, obter cada nó da lista de valores e adicionar
+o conteúdo do item, convertido para inteiro, em um vetor
+
+    c) Os conteúdos podem ser obtidos via innerHTML e convertidos com eval
+
+    d) Escolher o algoritmo de ordenação adequado, a partir do selectedIndex da
+lista de seleção, e aplicar ao vetor
+
+    e) Utilizar os operadores map e reduce, do vetor, para gerar os novos itens
+da lista de valores, substituindo o conteúdo da lista via innerHTML
+
+Implemente a função misturar, para embaralhar os valores da lista, de acordo
+com os passos apresentados a seguir:
+    a) Capturar a lista de valores via getElementById
+
+    b) Através do atributo children, obter cada nó da lista de valores e adicionar
+o conteúdo do item, convertido para inteiro, em um vetor
+
+    c) Os conteúdos podem ser obtidos via innerHTML e convertidos com eval
+
+    d) Aplicar a função shuffle ao vetor
+
+    e) Utilizar os operadores map e reduce, do vetor, para gerar os novos itens
+da lista de valores, substituindo o conteúdo da lista via innerHTML
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 
- ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/9701e9f7-3a61-42eb-8af1-3e017ea1a360)
+![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/e3a73449-f565-4eef-9448-cbabc3e0b6b6)
 
 
 Por fim, verifique os resultados obtidos através de um navegador.
-
-
-👉 2º Procedimento | Página de Receitas
+👉 2º Procedimento | Página de Receitas Dinâmica
 
 Crie uma página com o nome "receitas.html", no ambiente de edição;
-Defina a estrutura básica da página, assim como realizado no primeiro procedimento;
+Defina a estrutura básica da página, digitando html seguido de CTRL +
+Espaço, e selecionando a opção HTML:5;
 Modifique o conteúdo do arquivo para obter as seguintes características:
     a) Alterar a linguagem para pt-br
 
-    b) Incluir elementos semânticos para estruturar o site
+    b) Incluir a folha de estilos do Bootstrap
 
-    c) Definir uma área para o menu
+    c) Incluir o título "Catálogo de Receitas"
 
-    d) Definir a área principal com a apresentação do conjunto de receitas
+    d) Definir a área principal como container-fluid
 
-     e) Apresentar as receitas em divs, organizadas no modo flex
+    e) Utilizar fundo bg-warning
 
-    f) Organizar cada div com a inclusão de nome da receita, foto do prato, itens
-utilizados e modo de preparo
+    f) Definir uma div com apresentação no modo flex-wrap, identificada como
+pnlCatalogo, para apresentação dos painéis para as receitas
 
-    g) Definir uma área de rodapé com informação de copyright
+    g) Acrescentar um trecho em Java Script
 
-Inclua o arquivo "formatos.css", para utilizar as formatações globais;
-Crie o arquivo "receitas.css" para formatação da área de receitas:
-    a) Definir uma área para agrupar os painéis das receitas, com base no modo flex,
-garantindo a responsividade
+    h) Organizar os dados de receitas em um vetor de elementos JSON, com os
+campos título, imagem, preparo e ingredientes, onde este último é um vetor de
+elementos texto
 
-    b) Definir a formatação dos painéis de receitas
+    i) Definir as funções getListaIngredientes e getCard, ambos com parâmetro
+receita, relacionados à estrutura adotada no segmento JSON
 
-    c) Definir a formatação para o nome da receita, foto do prato, lista de itens e modo
-de preparo
+    j) Definir a função preencheCatalogo, sem parâmetros, invocada no evento
+onload do elemento body
 
-    d) Estabelecer dimensões fixas para os painéis
+Acrescente as imagens das receitas, preferencialmente no formato PNG, para
+posterior exibição nos painéis;
+Implemente a função getListaIngredientes, para geração da lista em HTML:
+    a) Iniciar a lista em uma variável texto com a tag ul
 
-    e) Utilizar barra de rolagem vertical na área principal, prevendo o aumento do
-quantitativo de receitas, no modo automático
+    b) Utilizar map e reduce, sobre o campo ingredientes da receita, para obter
+a representação como itens de lista, baseados na tag li, concatenando na
+variável de texto
 
-Ajuste as características para obter uma página como o exemplo abaixo:
+    c) Finalizar concatenando o fechamento de ul e retornando a lista HTML
 
- ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/28d6a02b-d4a5-4012-909a-5c12edbba752)
+Implemente a função getCard, para geração do painel da receita:
+    a) Utilizar substituição direta, com o texto entre sinais de crase
 
- 
-Material de orientações para desenvolvimento da missão
-prática do 1º nível de conhecimento.
+    b) Definir, no texto de retorno, uma div com classe card e largura de 250px
 
- Por fim, verifique os resultados obtidos através de um navegador.
+    c) Incluir uma imagem, com a classe card-img-top, tendo como origem o
+campo imagem da receita
 
-👉 3º Procedimento | Formulário e Navegação
+    d) Incluir uma div com classe card-body, referente ao corpo do painel
 
-Crie uma página com o nome "cadastro.html", no ambiente de edição;
-Defina a estrutura básica da página, conforme procedimentos anteriores;
-Modifique o conteúdo do arquivo para obter as seguintes características:
-    a) Alterar a linguagem para pt-br
+    e) Adicionar um título ao corpo, utilizando o campo titulo da receita, e classe
+card-title para formatação
 
-    b) Incluir elementos semânticos para estruturar o site
+    f) Adicionar uma div com classe card-text ao corpo, apresentando a lista de
+ingredientes, obtida via getListaIngredientes, um separador hr e texto do
+campo preparo da receita
 
-    c) Definir uma área para o menu
+Implemente a função preencheCatalogo, para exibição do conjunto de
+receitas na página, ao nível da div pnlCatalogo
+    a) Capturar o elemento pnlCatalogo através de getElementById
 
-    d) Definir a área principal com o título e um formulário de cadastro
+    b) Através de map e reduce, obter o texto HTML para os painéis de receita,
+formatados com base na função getCard, a partir do vetor JSON
 
-    e) Adotar classes Bootstrap na formatação da página
-
-    f) Utilizar os campos nome, e-mail, rua, número, complemento, cidade, estado e CEP,
-todos obrigatórios
-
-    g) Utilizar corretamente os tipos para cada campo de entrada, de acordo com os
-padrões do HTML5
-
-    h) Enviar a informação do formulário para um endereço de e-mail
-
-    i) Definir uma área de rodapé com informação de copyright
-
-    j) Definir a cor de fundo do corpo em uma tag "style"
-
-    k) Utilizar o modelo de colunas do Bootstrap para organizar o conteúdo do formulário
-e da página como um todo
-
-    l) Definir o modo de exibição da área principal como "container-fluid"
-
-Acrescente um menu de navegação na página:
-    a) Posicionar na área semântica de topo (header)
-
-    b) Utilizar listas para organizar os links para as três páginas
-
-    c) Formatar com base nas classes do Bootstrap (navbar)
-
-    d) Sinalizar a página ativa no menu
-
-Inclua a folha de estilos do Bootstrap, para utilizar as classes do framework
-    a) Utilizar os links para inclusão do Bootstrap, via CDN, que estão disponíveis em:
-https://getbootstrap.com.br/
-
-Altere o arquivo "formatos.css" para de adequar às novas dimensões utilizadas:
-    a) Acrescentar overflow-y automático para a área principal
-
-    b) Utilizar as dimensões 60px, calc(100vh - 100px) e 25px, respectivamente, para as
-áreas header, main e footer
-
-    c) Alterar a área de exibição do navegador para observar o surgimento da barra de
-rolagem quando o espaço central for ultrapassado
+    c) Alterar o innerHTML de pnlCatalogo para o texto HTML gerado
 
 Ajuste as características para obter uma página como o exemplo abaixo:
 
- ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/04083ff6-1773-405c-9baa-adb0ae6926ef)
+ ![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/f84bc9fd-d74c-49ab-a9ef-5e1ad455d870)
 
 
 Por fim, verifique os resultados obtidos através de um navegador.
+👉 3º Procedimento | Transmissão de Dados e VUE JS
 
-👉 4º Procedimento | Finalização do Site
+Acesse o endereço de teste REST https://reqres.in/api/users?per_page=10, e
+observar os dados que são retornados no formato JSON
+Crie uma página com o nome "usuarios.html", no ambiente de edição;
+Defina a estrutura básica da página, digitando html seguido de CTRL +
+Espaço, e selecionando a opção HTML:5;
+Modifique o conteúdo do arquivo para obter as seguintes características:
+    a) Alterar a linguagem para pt-br
 
-Modifique as outras duas páginas, para incluir no menu:
-    a) Acrescentar o código do menu na área de topo
+    b) Incluir a folha de estilos do Bootstrap
 
-    b) Incluir o link para a folha de estilos do Bootstrap
+    c) Incluir a biblioteca Java Script do VUE JS
 
-    c) Sinalizar a página ativa no menu
+    d) Se necessário, incluir a biblioteca Java Script do JQuery
 
-Modifique o sistema de painéis da página "receitas.html" para o uso do Bootstrap:
-    a) Utilizar a formatação do painel com a classe "card", e especificar a largura em
-200px via atributo "style"
+    e) Aplicar as classes container e bg-warning ao body
 
-    b) Posicionar a imagem no topo, com a classe "card-img-top"
+    f) Definir um título h1 com o texto "Usuários de Teste via REST"
 
-    c) Colocar a parte textual em uma div "card-body", formatando o título com a classe
-"card-title" e colocando ingredientes e preparo em "card-text"
+    g) Acrescentar uma referência ao site reqres.in, responsável por fornecer os
+dados de teste, no formato JSON, de forma gratuita
 
-    d) Separar ingredientes e preparo com um elemento "hr"
+    h) Incluir uma div com a identificação usuarios e classe CSS container-fluid
 
-Ajuste as características para obter páginas como os exemplos abaixo:
+    i) Na div de usuários incluir uma div com a classe row, representando uma
+linha de exibição para os painéis de usuários
 
- ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/88774f79-ce4c-44eb-bd37-eb8683f88a69)
+    j) No corpo da segunda div, acrescentar uma div para o painel de usuário,
+formatada como card, exibição em 3 colunas, espaçamento interno p-2 e
+tamanho da margem como m-3
 
+    k) Acrescentar um atributo de repetição v-for, do VUE JS, baseado na regra
+(user,index) in users, e um atributo :key, relacionado ao index
 
-  ![image](https://github.com/msbzz/estacio.m2.n1/assets/44148209/3e8d6398-8e42-4158-ad43-ea6718785015)
+    l) No interior do card, definir uma imagem, formatada como card-img-top,
+tendo a origem definida via :src, do VUE JS, com valor user.avatar
+
+    m) Definir uma div para o corpo do painel, formatado como card-body
+
+    n) Acrescentar um título ao corpo do painel, formatado como card-title, e
+usando os valores {{user.first_name}} e {{user.last_name}}
+
+    o) Acrescentar um parágrafo ao corpo do painel, formatado como card-text,
+tendo com conteúdo {{user.email}}
+
+    p) Definir um trecho Java Script para a definição do objeto VUE JS
+
+Implemente o objeto de controle VUE JS:
+    a) Definir um objeto app, do tipo Vue
+
+    b) Configurar o elemento alvo (el) como #usuarios, relacionado ao painel
+principal, utilizado como container
+
+    c) Configurar o atributo de dados (data) como uma função retornando o vetor
+users, inicialmente vazio
+
+    d) Configurar o evento mounted, com a chamada para loadUsers, visando o
+preenchimento do vetor users, utilizado como fonte de dados e na regra de
+repetição para os painéis
+
+    e) Configurar o atributo methods, contendo a função loadUsers
+
+    f) Implementar a função loadUsers para preenchimento do vetor users com
+os dados JSON fornecidos por https://reqres.in/api/users?per_page=10,
+podendo ser utilizado JQuery AJAX, XMLHttpRequest ou Fetch API
+
+Ajuste as características para obter uma página como o exemplo abaixo:
+
+![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/5ef6db22-f75a-47c2-823a-15d18b70b613)
 
 
 ## Pré-requisitos
@@ -197,16 +272,33 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 
 1. Clone o repositório: 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/msbzz/estacio.m2.n2.git
    ```
    
 2. Navegue até o diretório do projeto:
    ```bash
-   cd nome-do-repositorio (procedimento1,procedimento1 etc)
+   2.1 procedimento 1
+   
+      cd procedimento1/exemplosjs
+    
    ```
    
-3. Abra o arquivo `index.html` em seu navegador.
+   2.2. Abra o arquivo `ordenando.html` em seu navegador.
 
+   2.3 procedimentos 2  
+    
+      cd procedimento2 
+    
+   2.4. Abra o arquivo `receitas.html` em seu navegador.
+   
+   ``` 
+   2.5 procedimentos 3
+    
+      cd procedimento3 
+ 
+   2.6. Abra o arquivo `usuarios.html` em seu navegador.
+   
+   ``` 
 ## Tecnologias utilizadas
 - HTML
 - Bootstrap
