@@ -190,6 +190,7 @@ Ajuste as características para obter uma página como o exemplo abaixo:
 
 
 Por fim, verifique os resultados obtidos através de um navegador.
+
 👉 3º Procedimento | Transmissão de Dados e VUE JS
 
 Acesse o endereço de teste REST https://reqres.in/api/users?per_page=10, e
