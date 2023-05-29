@@ -280,9 +280,7 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
    2.1 procedimento 1
    
       cd procedimento1/exemplosjs
-    
-   ```
-   
+      
    2.2. Abra o arquivo `ordenando.html` em seu navegador.
 
    2.3 procedimentos 2  
@@ -290,8 +288,7 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
       cd procedimento2 
     
    2.4. Abra o arquivo `receitas.html` em seu navegador.
-   
-   ``` 
+     
    2.5 procedimentos 3
     
       cd procedimento3 
