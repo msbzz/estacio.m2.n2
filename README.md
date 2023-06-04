@@ -7,11 +7,12 @@
    
   O procedimento 1 trata-se de uma pagina de uma pagina de comparação entre algoritmos de ordenação. 
   
-  Os procedimentos 2 e 3 são sobre leitura e apresentação de dados que estarão se completando no final ou seja, no procedimento 3. 
+  Os procedimentos 2 e 3 são sobre leitura e apresentação de dados sendo sendo um originado em array (procedimento2) 
+  e outro originado em uma API REST(procedimento3). 
   
   
  
-## Funcionalidades
+## Procedimentos
  
  👉 1º Procedimento | Ordenando com Java Script e DOM
 
