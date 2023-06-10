@@ -64,6 +64,8 @@ Siga estas etapas para instalar e executar o projeto em sua máquina local:
 ## Estrutura de diretórios
 A estrutura de diretórios do projeto é organizada da seguinte forma:
 
+![image](https://github.com/msbzz/estacio.m2.n2/assets/44148209/4ff16a5a-d044-429a-831b-b0e621c5cbd5)
+
 ```
 nome-do-repositorio/
 ├── index.html
@@ -77,18 +79,4 @@ nome-do-repositorio/
 └── README.md
 ```
 
-## Contribuição
-Contribuições são bem-vindas! Se você quiser colaborar com este projeto, siga as etapas abaixo:
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua nova feature (`git checkout -b feature/nova-feature`)
-3. Faça o commit das suas alterações (`git commit -am 'Adicione uma nova feature'`)
-4. Envie para o repositório remoto (`git push origin feature/nova-feature`)
-5. Abra uma Pull Request
-
-## Licença
-Este projeto está licenciado sob a [descreva a licença utilizada]. Consulte o arquivo [LICENSE](LICENSE) para obter mais informações.
-
-## Contato
-- [Seu nome](mailto:seu-email@exemplo.com)
-- [Link do projeto](https://github.com/seu-usuario/nome-do-repositorio)
+ 
